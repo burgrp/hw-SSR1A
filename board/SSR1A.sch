@@ -1,0 +1,217 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:device.farm
+LIBS:SSR1A-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L G3MB-SSR U3
+U 1 1 5761559C
+P 7250 3650
+F 0 "U3" H 7250 4037 60  0000 C CNN
+F 1 "G3MB-SSR" H 7250 3931 60  0000 C CNN
+F 2 "device.farm:G3MB-SSR" H 7250 3650 60  0001 C CNN
+F 3 "" H 7250 3650 60  0001 C CNN
+	1    7250 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L MMBT3904 Q1
+U 1 1 57616111
+P 7650 4100
+F 0 "Q1" H 7900 4200 50  0000 C CNN
+F 1 "MMBT3904" H 8050 4100 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 8350 3450 50  0001 C CIN
+F 3 "" H 7650 4100 50  0000 L CNN
+	1    7650 4100
+	1    0    0    -1  
+$EndComp
+Text Label 6750 3750 2    60   ~ 0
+5V-MAINS
+$Comp
+L GND #PWR01
+U 1 1 57616377
+P 7750 4300
+F 0 "#PWR01" H 7750 4050 50  0001 C CNN
+F 1 "GND" H 7755 4127 50  0000 C CNN
+F 2 "" H 7750 4300 50  0000 C CNN
+F 3 "" H 7750 4300 50  0000 C CNN
+	1    7750 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 5761638C
+P 7300 4100
+F 0 "R1" V 7200 4100 50  0000 C CNN
+F 1 "1k5" V 7400 4100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 7230 4100 50  0001 C CNN
+F 3 "" H 7300 4100 50  0000 C CNN
+	1    7300 4100
+	0    1    1    0   
+$EndComp
+Text Label 7050 4100 2    60   ~ 0
+SW
+$Comp
+L R R2
+U 1 1 5762449B
+P 6750 4950
+F 0 "R2" V 6950 4950 50  0000 C CNN
+F 1 "270R" V 6850 4950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 6680 4950 50  0001 C CNN
+F 3 "" H 6750 4950 50  0000 C CNN
+	1    6750 4950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED-RESCUE-SWFWM01 D2
+U 1 1 57624710
+P 7100 4950
+F 0 "D2" H 7100 4750 50  0000 C CNN
+F 1 "LED" H 7100 4850 50  0000 C CNN
+F 2 "LEDs:LED_0805" H 7100 4950 50  0001 C CNN
+F 3 "" H 7100 4950 50  0000 C CNN
+	1    7100 4950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7750 3750 7750 3900
+Wire Wire Line
+	7150 4100 7050 4100
+Wire Wire Line
+	6600 4950 6550 4950
+$Comp
+L GND #PWR02
+U 1 1 576248D3
+P 7300 4950
+F 0 "#PWR02" H 7300 4700 50  0001 C CNN
+F 1 "GND" H 7305 4777 50  0000 C CNN
+F 2 "" H 7300 4950 50  0000 C CNN
+F 3 "" H 7300 4950 50  0000 C CNN
+	1    7300 4950
+	0    -1   -1   0   
+$EndComp
+Text Label 6550 4950 2    60   ~ 0
+LED
+$Sheet
+S 3650 3500 1150 1150
+U 5777AEFB
+F0 "ESP" 60
+F1 "esp-mains.sch" 60
+F2 "MAINS-1" I L 3650 3650 60 
+F3 "MAINS-2" I L 3650 3850 60 
+F4 "5V-MAINS" O R 4800 4350 60 
+F5 "5V-USB" O R 4800 4450 60 
+F6 "ADC" I L 3650 4050 60 
+F7 "GPIO16" B R 4800 4150 60 
+F8 "GPIO14" B R 4800 4050 60 
+F9 "GPIO12" B R 4800 3850 60 
+F10 "GPIO13" B R 4800 3950 60 
+F11 "GPIO5" B R 4800 3750 60 
+F12 "GPIO4" B R 4800 3650 60 
+F13 "5V" O R 4800 4550 60 
+$EndSheet
+$Comp
+L CONN_01X03 IN1
+U 1 1 57784F54
+P 3850 2500
+F 0 "IN1" H 3928 2541 50  0000 L CNN
+F 1 "CONN_01X03" H 3928 2450 50  0000 L CNN
+F 2 "device.farm:DG301-5.0-03" H 3850 2500 50  0001 C CNN
+F 3 "" H 3850 2500 50  0000 C CNN
+	1    3850 2500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 OUT1
+U 1 1 577855CA
+P 7000 2500
+F 0 "OUT1" H 7078 2541 50  0000 L CNN
+F 1 "CONN_01X03" H 7078 2450 50  0000 L CNN
+F 2 "device.farm:DG301-5.0-03" H 7000 2500 50  0001 C CNN
+F 3 "" H 7000 2500 50  0000 C CNN
+	1    7000 2500
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4800 4350 4900 4350
+Wire Wire Line
+	4800 3850 4900 3850
+Wire Wire Line
+	4800 3950 4900 3950
+NoConn ~ 4800 3750
+NoConn ~ 4800 4050
+NoConn ~ 4800 4150
+Text Label 4900 4350 0    60   ~ 0
+5V-MAINS
+Text Label 4900 3850 0    60   ~ 0
+SW
+Text Label 4900 3950 0    60   ~ 0
+LED
+Text Label 4050 2400 0    60   ~ 0
+MAINS-E
+Text Label 4050 2500 0    60   ~ 0
+MAINS-N
+Text Label 4050 2600 0    60   ~ 0
+MAINS-L-I
+Text Label 6800 2400 2    60   ~ 0
+MAINS-E
+Text Label 6800 2500 2    60   ~ 0
+MAINS-N
+Text Label 6800 2600 2    60   ~ 0
+MAINS-L-O
+Wire Wire Line
+	3650 3650 3550 3650
+Wire Wire Line
+	3650 3850 3550 3850
+Text Label 3550 3850 2    60   ~ 0
+MAINS-N
+Text Label 3550 3650 2    60   ~ 0
+MAINS-L-I
+Text Label 6750 3550 2    60   ~ 0
+MAINS-L-I
+Text Label 7750 3550 0    60   ~ 0
+MAINS-L-O
+NoConn ~ 3650 4050
+NoConn ~ 4800 3650
+$EndSCHEMATC
